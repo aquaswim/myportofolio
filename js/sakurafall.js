@@ -1,5 +1,4 @@
-let toggleSfPlay=undefined;
-(function(elementname) {
+(function(elementname,w) {
 	//utility
 	let util={};
 	util.genRandom=(max,min)=>{
@@ -103,5 +102,5 @@ let toggleSfPlay=undefined;
 	sakurafall.ctx=ctx;
 	sakurafall.draw();
 	console.log("sakurafall started");
-	toggleSfPlay=sakurafall.toggleDraw;
-})("sakurafall");
+	w.toggleSfPlay=sakurafall.toggleDraw;
+})("sakurafall",window);
