@@ -1,6 +1,6 @@
 (function(w) {
 	w.sf={};
-	sakurafall=undefined;
+	let sakurafall=undefined;
 	w.sf.initSakuraFall=function(elementname){
 		if(sakurafall){
 			console.error("Sakurafall already initialized!");
@@ -14,7 +14,7 @@
 				return (Math.random()*(max-min))+min;
 			}
 			/////////////
-			let sakurafall={};
+			sakurafall={};
 			let canvas=document.getElementById(elementname);
 			canvas.onresize=function(arg){
 				canvas.width=canvas.offsetWidth;
