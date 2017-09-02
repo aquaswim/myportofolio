@@ -1,7 +1,7 @@
 .debug{
 	outline: 1px dashed red;
 }
-.container{
+.outer-container{
 	width: 100%;
 	padding: 0px;
 }
@@ -12,16 +12,18 @@
 }
 
 .navbar-mycolor{
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.8);
 }
 
-@media (min-width: 768px){
-	.center-on-desktop{
-		display: inline;
-		margin: auto;
-	}
+#mainnavbar li a{
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
+	transition: .5s ease;
 }
-
+#mainnavbar li.active a[href$='profile']{
+	background-color: rgb(222,141,166);
+}
 #profile{
 	background: url('../assets/bganime.jpg');
 	background-repeat: no-repeat;
@@ -63,6 +65,17 @@
 }
 .downarrow{
 	position: relative;
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
+	transition: .5s ease;
+}
+.downarrow:hover{
+	-webkit-transform: translateY(1.5em);
+	-ms-transform: translateY(1.5em);
+	-moz-transform: translateY(1.5em);
+	-o-transform: translateY(1.5em);
+	transform: translateY(1.5em);
 }
 .downarrow a{
 	position: absolute;
@@ -73,4 +86,86 @@
 	-moz-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
+}
+
+#skill{
+	background-color: #F5F5F5;
+	color: #5B5B5B;
+}
+
+.portion h2{
+	text-align: center;
+}
+
+.separator{
+	border: 1px solid;
+	width:80%;
+	max-width: 200px;
+	margin: auto;
+}
+.skill-item{
+	text-align: center;
+}
+.skill-item h4{
+	margin-top: 0px;
+}
+.skill-item p{
+	max-width: 250px;
+	margin: auto;
+	margin-bottom: 1.5em;
+}
+#work{
+
+}
+.imgoverlaycontainer{
+	position: relative;
+	margin: 0 auto 2em;
+	width: 80%;
+	max-width: 256px;
+}
+.imgoverlaycontainer img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.overlay {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+	width: 100%;
+	height:0;
+	-webkit-transition: .5s ease;
+	-moz-transition: .5s ease;
+	-o-transition: .5s ease;
+	transition: .5s ease;
+}
+.imgoverlaycontainer:hover .overlay {
+	bottom: 0;
+	height: 100%;
+}
+
+.overlay-text {
+white-space: nowrap; 
+color: white;
+font-size: 20px;
+position: absolute;
+overflow: hidden;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+}
+
+.works-wrapper{
+	margin-top: 1em;
+}
+#backtotop{
+	position: fixed;
+	bottom: -0.5em;
+	right: 10px;
+	background-color: rgba(0,0,0,0.75);
+	padding: 0.25em;
 }

@@ -8,9 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 </head>
-<body>
-<header class="top">
-	<nav class="navbar navbar-mycolor navbar-fixed-top">
+<body data-spy="scroll" data-target=".navbar">
+<header id="top">
+	<nav class="navbar navbar-mycolor navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnavbar" aria-expanded="false">
@@ -21,18 +21,18 @@
 				</button>
 			</div>
 			<div class="collapse navbar-collapse" id="mainnavbar">
-				<ul class="nav navbar-nav center-on-desktop">
-					<li><a href="#">Profile</a></li>
-					<li><a href="#">Skill</a></li>
-					<li><a href="#">Works</a></li>
-					<li><a href="#">Contact</a></li>
+				<ul class="nav navbar-nav center-on-desktop navbar-right">
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#skill">Skill</a></li>
+					<li><a href="#work">Works</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 </header>
 <div id="top"></div>
-<div class="container">
+<div class="outer-container container">
 	<div id="profile" class="portion">
 		<canvas id="sakurafall"></canvas>
 		<div class="profiletext-wrapper">
@@ -45,68 +45,115 @@
 		</div>
 	</div>
 	<div id="skill" class="portion">
-		<h3>Programming Platform</h3>
-		<div class="separator"></div>
-		<div class="skills-wrapper">
-			<div class="skill-item">
-				<span class="fa-stack fa-5x">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-					<i class="fa fa-desktop fa-stack-1x"></i>
-				</span>
-				<h4>Desktop</h4>
-				<p>Powerfull Desktop Application Powered With C#</p>
-			</div>
-			<div class="skill-item">
-				<span class="fa-stack fa-5x">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-					<i class="fa fa-external-link fa-stack-1x"></i>
-				</span>
-				<h4>Web</h4>
-				<p>Web site or web based application using PHP or Node.js</p>
-			</div>
-			<div class="skill-item">
-				<span class="fa-stack fa-5x">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-					<i class="fa fa-mobile-phone fa-stack-1x"></i>
-				</span>
-				<h4>Mobile</h4>
-				<p>Developing mobile application</p>
+		<div class="container">
+			<h2>Programming Platform</h2>
+			<div class="separator"></div>
+			<div class="row">
+				<div class="skill-item col-md-4 col-sm-12">
+					<span class="fa-stack fa-5x">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-desktop fa-stack-1x"></i>
+					</span>
+					<h4>Desktop</h4>
+					<p>Powerfull Desktop Application Powered With C#</p>
+				</div>
+				<div class="skill-item col-md-4 col-sm-12">
+					<span class="fa-stack fa-5x">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-external-link fa-stack-1x"></i>
+					</span>
+					<h4>Web</h4>
+					<p>Web site or web based application using PHP or Node.js</p>
+				</div>
+				<div class="skill-item col-md-4 col-sm-12">
+					<span class="fa-stack fa-5x">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+						<i class="fa fa-mobile-phone fa-stack-1x"></i>
+					</span>
+					<h4>Mobile</h4>
+					<p>Developing mobile application</p>
+				</div>
 			</div>
 		</div>
-		<div style="clear: both;"></div>
 	</div>
 	<div id="work" class="portion">
-		<h3>My Works</h3>
+		<h2>My Works</h2>
 		<div class="separator"></div>
-		<div class="works-wrapper">
-			<div class="work-item">
-				<div class="imgoverlaycontainer">
-					<img src="assets/works/work-90degree.png">
-					<div class="overlay">
-						<div class="overlay-text">90 Degree Game</div>
+		<div class="container">
+			<div class="row works-wrapper">
+				<div class="work-item col-md-3 col-sm-12">
+					<div class="imgoverlaycontainer">
+						<img src="assets/works/work-90degree.png">
+						<div class="overlay">
+							<div class="overlay-text">90 Degree Game</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="work-item">
-				<div class="imgoverlaycontainer">
-					<img src="assets/works/dummy.png">
-					<div class="overlay">
-						<div class="overlay-text">lorem ipsum asdfk</div>
+				<div class="work-item col-md-3 col-sm-12">
+					<div class="imgoverlaycontainer">
+						<img src="assets/works/dummy.png">
+						<div class="overlay">
+							<div class="overlay-text">lorem ipsum asdfk</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div style="clear: both;"></div>
 	</div>
 	<div id="contact" class="portion">
-		<h3>Contact Me</h3>
+		<h2>Contact Me</h2>
+		<div class="separator"></div>
 	</div>
 </div>
 <a id="backtotop" href="#top"><i class="fa fa-angle-down fa-3x fa-rotate-180 fa-inverse"></i></a>
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/scrollspy.js"></script>
-<script type="text/javascript" src="js/sakurafall.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/sakurafall.js"></script>
+<script type="text/javascript" src="js/scrollspy.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Add smooth scrolling on all links inside the navbar
+		$('a[href*="#"]')
+		.not('[href="#"]')
+		.not('[href="#0"]')
+		.on('click', function(event) {
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({scrollTop: $(hash).offset().top}, 800, function(){
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			}  // End if
+		});
+		$('#sakurafall').on('scrollSpy:enter',function(){
+			toggleSfPlay(true);
+		});
+		$('#sakurafall').on('scrollSpy:exit',function(){
+			toggleSfPlay(false);
+		});
+		$('#sakurafall').scrollSpy();
+		//back to top
+		$('#top').on('scrollSpy:enter',function(){
+			$('#backtotop').animate({
+				height:'0px'
+			});
+		});
+		$('#top').on('scrollSpy:exit',function(){
+			$('#backtotop').animate({
+				height:'48px'
+			});
+		});
+		$('#top').scrollSpy();
+	});
+</script>
 <!--Debugging script-->
 <script type="text/javascript">
 	(function(){
