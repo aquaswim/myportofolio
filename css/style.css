@@ -1,0 +1,269 @@
+.debug{
+	outline: 1px dashed red;
+}
+body{
+	margin: 0px;
+	font-family: verdana, sans-serif;
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+}
+
+button.accordion{
+	background-color: rgba(0,0,0,0);
+	color: #eee;
+	cursor: pointer;
+	padding: 0.7em 2em;
+	text-align: center;
+	width: 100%;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	font-size: 1.5em;
+}
+
+button.accordion.active , button.accordion:hover,div.panel ul li:hover,div.panel ul li.active{
+	background-color: rgb(222,141,166);
+}
+
+div.panel{
+	background-color: rgba(0,0,0,0);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+div.panel ul{
+	list-style: none;
+	padding: 0px;
+	text-align: center;
+	margin: 0px;
+}
+
+div.panel ul li{
+	padding: 1em 2em;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+div.panel ul li a{
+	text-decoration: none;
+	color:inherit;
+}
+
+.container{
+	width: 100%;
+}
+
+.portion{
+	min-height: 660px;
+	width: 100%;
+	padding-top: 64px;
+	text-align: center;
+}
+
+#profile{
+	background-image: url('../assets/bganime.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	display: table;
+	padding-top: 0px;
+	min-height: 660px;
+}
+.profiletext-wrapper{
+	margin: auto;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	background-color: rgba(0,0,0,0.15);
+}
+
+.profiletext{
+	display: block;
+	width: 80%;
+	min-width: 280px;
+	max-width: 300px;
+	padding: 10px;
+	border: 3px solid white;
+	margin: auto;
+	transition: 0.4s;
+	background-color: rgba(255,255,255,0.2);
+	background-image: url('../assets/dpatternold.png');
+	text-shadow: 3px 2px 6px black;
+}
+
+.profiletext:hover{
+	text-shadow: 3px 2px 2px black;
+}
+
+.profiletext div.myname h1{
+	font-size: 3em;
+	font-weight: bold;
+	margin: 3px;
+}
+
+.profiletext div.myjob{
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.profiletext div.mydescription{
+	padding: 0 0.5em 0.5em;
+}
+
+.downarrow{
+	position: relative;
+	text-align: center;
+}
+
+.downarrow a{
+	text-decoration: none;
+}
+
+.downarrow a i{
+	width: 4em;
+	position: absolute;
+	left: 50%;
+	top: 35px;
+	transform: translateX(-50%);
+	cursor: pointer;
+	transition: 0.4s ease-out;
+}
+
+.downarrow a i:hover{
+	margin-top: 10px;
+}
+
+#sakurafall{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	min-height: 660px;
+}
+
+#skill{
+	background-color: #F8F8F8;
+	color: #656565;
+}
+div.portion h3{
+	font-size: 2em;
+	margin: 0.5em 0px;
+}
+.separator{
+	border-bottom: solid 0.1em;
+	max-width: 200px;
+	margin: auto;
+}
+
+.skill-item{
+	padding-bottom: 2.5em;
+}
+
+.skill-item h4{
+	margin: 0px;
+	text-transform: uppercase;
+}
+
+.skill-item p{
+	margin: 10px 50px 0px;
+	text-transform: capitalize;
+	min-height: 80px;
+}
+
+@media only screen and (min-width: 768px){
+	button.accordion{
+		display: none;
+	}
+	div.panel{
+		max-height: none;
+		max-height: initial;
+		background-color: initial;
+	}
+	div.panel li{
+		display: inline-flex;
+	}
+	.skills-wrapper{
+		max-width: 800px;
+		margin: auto;
+	}
+	.skill-item{
+		width: 33.33%;
+		display: block;
+		float: left;
+	}
+	.works-wrapper{
+		width: 80%;
+		margin: auto;
+	}
+	.work-item{
+		float: left;
+		width: 50%;
+		box-sizing: border-box;
+	}
+}
+
+#top{
+	position: absolute;
+	top: 64px;
+}
+
+#backtotop{
+	position: fixed;
+	right: 10px;
+	bottom: 0px;
+	background-color: rgba(0,0,0,0.75);
+	padding: 0 10px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.work-item{
+	margin: 2em auto;
+	padding: 0 3em;
+}
+
+.imgoverlaycontainer{
+	position: relative;
+	box-shadow: 0px 4px 11px 1px rgba(0,0,0,0.34);
+}
+
+.imgoverlaycontainer img{
+	display: block;
+	width: 100%;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+	width: 100%;
+	height:0;
+	transition: .5s ease;
+}
+
+.imgoverlaycontainer:hover .overlay {
+	bottom: 0;
+	height: 100%;
+}
+
+.overlay-text {
+	white-space: nowrap; 
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bayu Setiawan Portofolio page - home</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+</head>
+<body>
+<header>
+	<nav>
+		<button class="accordion">Menu</button>
+		<div class="panel">
+			<ul>
+				<li><a href="#profile">Profile</a></li>
+				<li><a href="#skill">Skill</a></li>
+				<li><a href="#work">My Works</a></li>
+				<li><a href="#contact">Contact Me</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<div id="top"></div>
+<div class="container">
+	<div id="profile" class="portion">
+		<canvas id="sakurafall"></canvas>
+		<div class="profiletext-wrapper">
+			<div class="profiletext">
+				<div class="myname"><h1>Bayu Setiawan</h1></div>
+				<div class="myjob">Programmer</div>
+				<div class="mydescription">Hello my name is Bayu Setiawan, i'm passionate software developer from Indonesia, i am fast learner and very positive about fast changing working environment.</div>
+			</div>
+			<div class="downarrow"><a href="#skill"><i class="fa fa-angle-down fa-5x fa-inverse" aria-hidden="true"></i></a></div>
+		</div>
+	</div>
+	<div id="skill" class="portion">
+		<h3>Programming Platform</h3>
+		<div class="separator"></div>
+		<div class="skills-wrapper">
+			<div class="skill-item">
+				<span class="fa-stack fa-5x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-desktop fa-stack-1x"></i>
+				</span>
+				<h4>Desktop</h4>
+				<p>Powerfull Desktop Application Powered With C#</p>
+			</div>
+			<div class="skill-item">
+				<span class="fa-stack fa-5x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-external-link fa-stack-1x"></i>
+				</span>
+				<h4>Web</h4>
+				<p>Web site or web based application using PHP or Node.js</p>
+			</div>
+			<div class="skill-item">
+				<span class="fa-stack fa-5x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-mobile-phone fa-stack-1x"></i>
+				</span>
+				<h4>Mobile</h4>
+				<p>Developing mobile application</p>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	<div id="work" class="portion">
+		<h3>My Works</h3>
+		<div class="separator"></div>
+		<div class="works-wrapper">
+			<div class="work-item">
+				<div class="imgoverlaycontainer">
+					<img src="assets/works/work-90degree.png">
+					<div class="overlay">
+						<div class="overlay-text">90 Degree Game</div>
+					</div>
+				</div>
+			</div>
+			<div class="work-item">
+				<div class="imgoverlaycontainer">
+					<img src="assets/works/dummy.png">
+					<div class="overlay">
+						<div class="overlay-text">lorem ipsum asdfk</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	<div id="contact" class="portion">
+		<h3>Contact Me</h3>
+	</div>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-angle-down fa-3x fa-rotate-180 fa-inverse"></i></a>
+<script type="text/javascript">
+	//accordion
+	var acc=document.getElementsByClassName('accordion');
+	var i;
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick=function() {
+			this.classList.toggle("active");
+			var panel=this.nextElementSibling;
+			panel.style.maxHeight=panel.style.maxHeight?null:(panel.scrollHeight+"px");
+		}
+	}
+</script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/scrollspy.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.portion').on('scrollSpy:enter',function(){
+		$("div.panel ul li a[href$='"+$(this).attr('id')+"']").parent().addClass('active');
+	});
+	$('.portion').on('scrollSpy:exit',function(){
+		$("div.panel ul li a[href$='"+$(this).attr('id')+"']").parent().removeClass('active');
+	});
+	$('.portion').scrollSpy({offsetTop:64});
+	//only enable sakurafall when on #sakurafall
+	$('#sakurafall').on('scrollSpy:enter',function(){
+		toggleSfPlay(true);
+	});
+	$('#sakurafall').on('scrollSpy:exit',function(){
+		toggleSfPlay(false);
+	});
+	$('#sakurafall').scrollSpy({offsetTop:256});
+	//back to top
+	$('#top').on('scrollSpy:enter',function(){
+		$('#backtotop').animate({
+			height:'0px'
+		});
+	});
+	$('#top').on('scrollSpy:exit',function(){
+		$('#backtotop').animate({
+			height:'48px'
+		});
+	});
+	$('#top').scrollSpy({offsetTop:64});
+	//smooth scrool
+	$('a[href*="#"]')
+	  // Remove links that don't actually link to anything
+	  .not('[href="#"]')
+	  .not('[href="#0"]')
+	  .click(function(event) {
+	    // On-page links
+	    if (
+	      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+	      && 
+	      location.hostname == this.hostname
+	    ) {
+	      // Figure out element to scroll to
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	      // Does a scroll target exist?
+	      if (target.length) {
+	        // Only prevent default if animation is actually gonna happen
+	        event.preventDefault();
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000, function() {
+	          // Callback after animation
+	          // Must change focus!
+	          var $target = $(target);
+	          $target.focus();
+	          if ($target.is(":focus")) { // Checking if the target was focused
+	            return false;
+	          } else {
+	            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+	            $target.focus(); // Set focus again
+	          };
+	        });
+	      }
+	    }
+	  });
+});
+</script>
+<script type="text/javascript" src="js/sakurafall.js"></script>
+<!--Debugging script-->
+<script type="text/javascript">
+	(function(){
+		document.write("<button style='position:fixed;bottom:10px;left:10px;' id='toggledebugarea'>Layout area</button>");
+		var btndebug=document.getElementById('toggledebugarea');
+		btndebug.onclick=()=>{
+			let allele=document.body.getElementsByTagName("*");
+			for (var i = 0; i < allele.length; i++) {
+				allele[i].classList.toggle("debug");
+			}
+			console.log("debug class toggeled");
+		};
+	})();
+</script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
