@@ -133,11 +133,13 @@
 				});
 			}  // End if
 		});
+		//init sakurafall
+		sf.initSakuraFall("sakurafall");
 		$('#sakurafall').on('scrollSpy:enter',function(){
-			toggleSfPlay(true);
+			sf.toggleSfPlay(true);
 		});
 		$('#sakurafall').on('scrollSpy:exit',function(){
-			toggleSfPlay(false);
+			sf.toggleSfPlay(false);
 		});
 		$('#sakurafall').scrollSpy();
 		//back to top
