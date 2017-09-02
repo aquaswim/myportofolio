@@ -1,5 +1,5 @@
 # myportofolio
 Portofolio
 
-# todo
-mozila compatibility
+#todo
+sakurafall in ie
