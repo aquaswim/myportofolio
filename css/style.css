@@ -171,3 +171,11 @@ transform: translate(-50%, -50%);
 	background-color: rgba(0,0,0,0.75);
 	padding: 0.25em;
 }
+
+.font-lato{
+	font-family: 'Lato', sans-serif;
+}
+
+.font-raleway{
+	font-family: 'Raleway', sans-serif;
+}
