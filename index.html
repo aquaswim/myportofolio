@@ -197,20 +197,5 @@
 		$('#top').scrollSpy();
 	});
 </script>
-<!--Debugging script-->
-<script type="text/javascript">
-	(function(){
-		document.write("<button style='position:fixed;bottom:10px;left:10px;' id='toggledebugarea'>Layout area</button>");
-		var btndebug=document.getElementById('toggledebugarea');
-		btndebug.onclick=()=>{
-			let allele=document.body.getElementsByTagName("*");
-			for (var i = 0; i < allele.length; i++) {
-				allele[i].classList.toggle("debug");
-			}
-			console.log("debug class toggeled");
-		};
-	})();
-</script>
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
