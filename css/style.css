@@ -175,7 +175,22 @@ transform: translate(-50%, -50%);
 .font-lato{
 	font-family: 'Lato', sans-serif;
 }
-
+#contact{
+	min-height: 0;
+}
 .font-raleway{
 	font-family: 'Raleway', sans-serif;
+}
+.form-control{
+	border-radius: 0px;
+}
+.btn{
+	border-radius: 0px;
+}
+.form-wrapper{
+	margin: 1em auto auto;
+	padding: 2em;
+}
+footer{
+	padding-bottom: 1em;
 }
