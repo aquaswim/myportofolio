@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bayu Setiawan Portofolio page - Thankyou for your message</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		html,body{
+			width: 100%;
+			height: 100%;
+			position: relative;
+			top: 0px;
+			left: 0px;
+		}
+		body{
+			background: url('assets/bganime.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.streach-to-full{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+		}
+		.text-shadow{
+			text-shadow: 3px 2px 3px black;
+		}
+	</style>
+</head>
+<body>
+<canvas id="sakurafall" class="streach-to-full"></canvas>
+<div class="streach-to-full" style="display: table;">
+	<div class="container" style="display: table-cell;vertical-align: middle;">
+		<div class="jumbotron" style="background-color: rgba(0,0,0,0.45);color: white;">
+			<h1 class="text-shadow">Thank you</h1>
+			<p class="text-shadow">Thank you for sending me your message, i will reply to your email ASAP.</p>
+			<p><a class="btn btn-primary btn-lg" href="/" role="button" style="background-color: rgba(0,0,0,0.5);">Back Home</a></p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/sakurafall.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		sf.initSakuraFall("sakurafall");
+	});
+</script>
+</body>
+</html>
