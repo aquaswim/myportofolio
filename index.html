@@ -106,26 +106,26 @@
 		<div class="separator"></div>
 		<div class="container">
 			<div class="form-wrapper">
-				<form>
+				<form name="contact" action="thank-you" netlify>
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="form-group">
 								<label for="name" required>Name</label>
-								<input type="text" class="form-control" id="name">
+								<input type="text" class="form-control" id="name" name="name">
 							</div>
 							<div class="form-group">
 								<label for="company">Company (optional)</label>
-								<input type="text" class="form-control" id="company">
+								<input type="text" class="form-control" id="company" name="company">
 							</div>
 							<div class="form-group">
 								<label for="email" required>Email address:</label>
-								<input type="email" class="form-control" id="email">
+								<input type="email" class="form-control" id="email" name="email">
 							</div>
 						</div>
 						<div class="col-md-6 col-sm-12">
 							<div class="form-group" required>
 								<label for="message">Message</label>
-								<textarea class="form-control" id="message" rows="5"></textarea>
+								<textarea class="form-control" id="message" rows="5" name="message"></textarea>
 							</div>
 						</div>
 					</div>
