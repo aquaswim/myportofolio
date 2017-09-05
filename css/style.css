@@ -116,8 +116,9 @@
 	margin: auto;
 	margin-bottom: 1.5em;
 }
-#work{
-
+.work-item a{
+	text-decoration: none;
+	color: inherit;
 }
 .imgoverlaycontainer{
 	position: relative;
