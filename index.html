@@ -4,7 +4,7 @@
 	<title>Bayu Setiawan Portofolio page - home</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width , initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
@@ -46,9 +46,9 @@
 		</div>
 	</div>
 	<div id="skill" class="portion">
+		<h2>Programming Platform</h2>
+		<div class="separator"></div>
 		<div class="container">
-			<h2>Programming Platform</h2>
-			<div class="separator"></div>
 			<div class="row">
 				<div class="skill-item col-md-4 col-sm-12">
 					<span class="fa-stack fa-5x">
@@ -104,8 +104,48 @@
 	<div id="contact" class="portion">
 		<h2>Contact Me</h2>
 		<div class="separator"></div>
+		<div class="container">
+			<div class="form-wrapper">
+				<form>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group">
+								<label for="name" required>Name</label>
+								<input type="text" class="form-control" id="name">
+							</div>
+							<div class="form-group">
+								<label for="company">Company (optional)</label>
+								<input type="text" class="form-control" id="company">
+							</div>
+							<div class="form-group">
+								<label for="email" required>Email address:</label>
+								<input type="email" class="form-control" id="email">
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="form-group" required>
+								<label for="message">Message</label>
+								<textarea class="form-control" id="message" rows="5"></textarea>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
 	</div>
 </div>
+<footer>
+	<div class="container">
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<a href="#profile">Anime Background</a> Taken from 5 Centimeters Per Second Movie
+			</div>
+			<div class="col-md-4 pull-right muted">© 2017 Bayu Setiawan. All rights reserved</div>
+		</div>
+	</div>
+</footer>
 <a id="backtotop" href="#top"><i class="fa fa-angle-down fa-3x fa-rotate-180 fa-inverse"></i></a>
 <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
